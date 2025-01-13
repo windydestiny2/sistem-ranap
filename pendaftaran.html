@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Pasien - Rumah Sakit Sehat</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Rumah Sakit Sehat</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="pendaftaran.html">Pendaftaran Pasien</a></li>
+        <li><a href="info-kamar.html">Info Kamar</a></li>
+        <li><a href="info-dokter.html">Info Dokter</a></li>
+        <li><a href="chat.html">Chat AI</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="pendaftaran">
+    <h2>Pendaftaran Pasien Rawat Inap</h2>
+    <form id="formPendaftaran" method="POST" action="proses-pendaftaran.php">
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" required>
+    
+      <label for="tanggalLahir">Tanggal Lahir:</label>
+      <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+    
+      <label for="alamat">Alamat:</label>
+      <textarea id="alamat" name="alamat" required></textarea>
+    
+      <label for="kelasKamar">Pilih Kelas Kamar:</label>
+      <select id="kelasKamar" name="kelasKamar" required>
+        <option value="kelas1">Kelas 1 (Pribadi, Fasilitas Lengkap)</option>
+        <option value="kelas2">Kelas 2 (Kamar Bersama, Fasilitas Standar)</option>
+        <option value="kelas3">Kelas 3 (Kamar Bersama, Fasilitas Dasar)</option>
+      </select>
+    
+      <label for="metodePembayaran">Pilih Metode Pembayaran:</label>
+      <select id="metodePembayaran" name="metodePembayaran" required>
+        <option value="asuransi">Asuransi</option>
+        <option value="bpjs">BPJS</option>
+        <option value="umum">Bayar Umum</option>
+      </select>
+    
+      <!-- Input untuk NIK, No BPJS, dan No Asuransi -->
+      <div id="additionalFields"></div>
+    
+      <button type="submit">Daftar</button>
+    </form>
+    
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rumah Sakit Sehat</p>
+  </footer>
+</body>
+</html>
